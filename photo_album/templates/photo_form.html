@@ -2,9 +2,11 @@
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div id="main-form" class="col-md-{{ '8' if photo else '6' }}">
-      <h2 class="text-center">
-        {{ 'Editar Foto' if photo else 'Agregar nueva Foto' }}
+      <div class="div-h2-add-new-picture">
+        <h2 class="text-center">
+          {{ 'Edit photo' if photo else 'Add new picture' }}
       </h2>
+    </div>
       <div class="row">
         <div class="col">
           <form id="form-container" method="POST" enctype="multipart/form-data">
@@ -17,12 +19,12 @@
 
             <div class="form-floating mb-3">
               {{ form.description(class="form-control",
-              placeholder="Descripción") }} {{
+              placeholder="Description") }} {{
               form.description.label(class="form-label") }}
             </div>
 
             <div class="form-floating mb-3">
-              {{ form.image(class="form-control", placeholder="Imagen",
+              {{ form.image(class="form-control", placeholder="Image",
               id="imageInput") }} {{ form.image.label(class="form-label") }}
             </div>
 
@@ -32,14 +34,14 @@
                 class="btn btn-success mx-2"
                 id="submit-button"
               >
-                Enviar
+                Send
               </button>
               <a
                 href="{{ url_for('main.index') }}"
                 class="btn btn-secondary"
                 id="cancel-button"
               >
-                Cancelar
+                Cancel
               </a>
             </div>
           </form>
@@ -47,7 +49,7 @@
 
         {% if photo %}
         <div id="edit-image" class="col-md-4 text-center mb-3">
-          <p>Imagen actual:</p>
+          <p>Current image:</p>
           <div class="edit-image-container">
             <img
               src="{{ url_for('static', filename='uploads/' + photo.image) }}"
