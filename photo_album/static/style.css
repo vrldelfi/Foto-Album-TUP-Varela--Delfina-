@@ -118,7 +118,7 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 2px solid #ddd;
+  border: 2px solid #bababa;
   width: auto;
   height: auto;
   padding: 15px;
@@ -218,7 +218,6 @@ a {
   margin-left: auto;
   margin-right: auto;
   width: 300px;
-  border: 1px solid red;
 }
 .social-link{
   color: white;
