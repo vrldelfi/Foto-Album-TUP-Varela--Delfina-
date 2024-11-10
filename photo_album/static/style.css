@@ -1,18 +1,30 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f0f0f0;
 }
 header {
-  background-color: #333333;
+  background-color: #ec2323;
   color: #fff;
   padding: 1rem;
   text-align: center;
+  height: 170px;
+  margin-bottom: 20px;
 }
 h1,
-h2 {
+h2,
+h3,
+h4 {
   margin: 0.5rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.photo-album{
+  font-size: 57px;
+  margin-top: 10px;
+}
+.subtitle{
+  font-size: 13px;
 }
 .photo {
   background-color: #fff;
@@ -25,6 +37,8 @@ h2 {
   max-width: 100%;
   height: auto;
 }
+
+/*------------ BUTTON COLORS AND HOVERS ---------------*/
 #submit-button,
 #cancel-button,
 #edit-button,
@@ -34,10 +48,58 @@ h2 {
   border-radius: 3px;
   padding: 5px 30px 5px 30px;
   color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  cursor: pointer;
 }
-#add-button {
-  margin: 10px;
+#delete-button{
+  background-color: #ec2323;
 }
+#delete-button:hover{
+  background-color: #c01010;
+}
+#add-button{
+  background-color: rgb(249, 189, 51);
+  margin-top: 28px;
+  height: 40px; 
+  width: 170px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: rgb(249, 189, 51);
+}
+#add-button:hover{
+  background-color: rgb(242, 173, 14);
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+.button-container{
+  margin-left: auto;
+  margin-right: auto;
+}
+#edit-button{
+  background-color: rgb(57, 123, 221);
+  border-color: rgb(57, 123, 221);
+}
+#edit-button:hover{
+  background-color: rgb(43, 103, 192);
+}
+#submit-button{
+  background-color: rgb(61, 198, 61);
+  width: 100%;
+}
+#submit-button:hover{
+  background-color: rgb(48, 174, 48);
+}
+#cancel-button{
+  background-color: rgb(147, 147, 147);
+}
+#cancel-button:hover{
+  background-color: rgb(128, 128, 128);
+}
+
+/*------------ GALLERY ITEMS ---------------*/
 .image-subcontainer {
   width: 100%;
   height: 200px;
@@ -45,7 +107,6 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid blue;
 }
 .gallery {
   display: flex;
@@ -57,12 +118,10 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid #ddd;
-  padding: 10px;
-  width: 250px;
-  height: 300px;
-  padding: 10px;
-  border: 1px solid red;
+  border: 2px solid #ddd;
+  width: auto;
+  height: auto;
+  padding: 15px;
 }
 .image-subcontainer img {
   width: 100%;
@@ -70,19 +129,26 @@ h2 {
   object-fit: cover;
 }
 .image-info {
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
 }
+
+/*------------ PHOTO FORM ---------------*/
 #main-form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid red;
-  padding: 10px;
+  border-radius: 10px;
+  border-width: 4px;
+  padding: 10px 15px 20px 15px;
   height: 350px;
+  background-color: #ec2323;
+}
+.text-center{
+  padding-top: 10px;
+  color: white;
 }
 .edit-image-container {
   width: 100%;
@@ -91,43 +157,76 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid yellow;
+  margin-bottom: -20px;
 }
 .edit-image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  padding-bottom: 20px;
 }
 #edit-image {
   height: 100%;
-  border: 1px solid blue;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-right: 20px;
 }
-#form-container {
-  border: 1px solid blue;
+.current-image{
+  color: rgb(75, 75, 75);
 }
+
+/*------------ PHOTO TEXT ---------------*/
 .h5-text {
-  border: 1px solid yellow;
   font-size: 17px;
+  margin: 10px auto 0px auto;
 }
 .description-text {
-  border: 1px solid yellow;
   font-size: 13px;
+  margin: 0px auto 10px auto;
+}
+
+/*------------ FOOTER ---------------*/
+.make-space{
+  height: 130px;
+  width: auto;
 }
 .container-redes {
+  background-color: #ec2323;
+  height: 90px;
+  margin-top: 50px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.div-h2-my-social-media{
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
+}
+.h2-my-social-media{
+  font-size: 15px;
+  color: #ffffff;
+  padding-top: 15px;
+  margin-bottom: -5px;
 }
 a {
   padding: 5px;
 }
-.h3-mis-redes {
-  font-size: 20px;
-}
 .subcontainer-redes {
   display: flex;
-  justify-content: center;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
   width: 300px;
   border: 1px solid red;
+}
+.social-link{
+  color: white;
+}
+.social-link:hover{
+  color: rgb(175, 175, 175);
+}
+.stars{
+  color: white;
+  padding: 15px 13px 0px 15px;
 }
